@@ -168,7 +168,7 @@ uint8_t OW_Search(uint8_t *buf, uint8_t num)
 		numBit = 1;
 		currentCollision = 0;
 
-		OW_Send(OW_SEND_RESET, (uint8_t*)"\xf0", 1, 0, 0, OW_NO_READ);
+		OW_Send(OW_SEND_RESET, (uint8_t*)"\xf0", 1, NULL, 0, OW_NO_READ);
 
 		for (numBit = 1; numBit <= 64; numBit++)
 		{
