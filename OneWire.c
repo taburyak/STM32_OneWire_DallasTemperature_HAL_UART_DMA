@@ -1,7 +1,7 @@
 /*
  * OneWire.c
  *
- *  Created on: 18 квіт. 2019 р.
+ *  Created on: 18 пїЅпїЅпїЅ. 2019 пїЅ.
  *      Author: Andriy Honcharenko
  */
 
@@ -55,8 +55,8 @@ static uint8_t OW_toByte(uint8_t *ow_bits)
 
 static void OW_SendBits(uint8_t num_bits)
 {
-	HAL_UART_Transmit_DMA(&HUARTx, ow_buf, num_bits);
 	HAL_UART_Receive_DMA(&HUARTx, ow_buf, num_bits);
+	HAL_UART_Transmit_DMA(&HUARTx, ow_buf, num_bits);
 
 	while (HAL_UART_GetState(&HUARTx) != HAL_UART_STATE_READY)
 	{
